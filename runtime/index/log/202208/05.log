@@ -1,0 +1,10 @@
+[2022-08-05T15:10:14+08:00][sql] CONNECT:[ UseTime:0.002116s ] mysql:host=127.0.0.1;port=3306;dbname=swiftadmin;charset=utf8mb4
+[2022-08-05T15:10:14+08:00][sql] SHOW FULL COLUMNS FROM `sa_config` [ RunTime:0.001147s ]
+[2022-08-05T15:10:14+08:00][sql] SELECT * FROM `sa_config` [ RunTime:0.000581s ]
+[2022-08-05T15:10:14+08:00][sql] SELECT * FROM `sa_config` WHERE  `group` = 'site' [ RunTime:0.000772s ]
+[2022-08-05T15:10:14+08:00][sql] SELECT * FROM `sa_config` [ RunTime:0.000850s ]
+[2022-08-05T15:14:53+08:00][sql] CONNECT:[ UseTime:0.001617s ] mysql:host=127.0.0.1;port=3306;dbname=swiftadmin;charset=utf8mb4
+[2022-08-05T15:14:53+08:00][sql] SHOW FULL COLUMNS FROM `sa_config` [ RunTime:0.001234s ]
+[2022-08-05T15:14:53+08:00][sql] SELECT * FROM `sa_config` [ RunTime:0.000780s ]
+[2022-08-05T15:14:53+08:00][sql] SELECT * FROM `sa_config` WHERE  `group` = 'site' [ RunTime:0.000913s ]
+[2022-08-05T15:14:53+08:00][sql] SELECT * FROM `sa_config` [ RunTime:0.000839s ]

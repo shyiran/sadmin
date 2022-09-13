@@ -1,0 +1,4 @@
+<?php
+//000000604800
+ exit();?>
+a:16:{s:9:"site_name";s:50:"基于ThinkPHP和layui的极速后台开发框架2";s:8:"site_url";s:18:"www.swiftadmin.net";s:9:"site_logo";s:23:"/static/images/logo.png";s:9:"site_http";s:25:"http://www.swiftadmin.net";s:10:"site_state";s:1:"0";s:9:"site_type";s:1:"0";s:11:"site_mobile";s:24:"https://m.swiftadmin.net";s:8:"site_icp";s:20:"京ICP备13000001号";s:10:"site_email";s:20:"admin@swiftadmin.net";s:12:"site_keyword";s:15:"网站关键字";s:16:"site_description";s:12:"网站描述";s:10:"site_total";s:15:"统计代码：";s:14:"site_copyright";s:15:"版权信息：";s:14:"site_clearLink";s:1:"1";s:11:"site_status";s:1:"0";s:11:"site_notice";s:4:"html";}

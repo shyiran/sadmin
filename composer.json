@@ -1,0 +1,70 @@
+{
+    "name": "topthink/think",
+    "description": "the new thinkphp framework",
+    "type": "project",
+    "keywords": [
+        "framework",
+        "thinkphp",
+        "ORM"
+    ],
+    "homepage": "http://thinkphp.cn/",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "liu21st",
+            "email": "liu21st@gmail.com"
+        },
+        {
+            "name": "yunwuxin",
+            "email": "448901948@qq.com"
+        }        
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.0.13",
+        "topthink/think-orm": "^2.0",
+        "topthink/think-multi-app": "^1.0",
+        "topthink/think-trace": "^1.4",
+        "topthink/think-image": "^1.0",
+        "topthink/think-view": "^1.0",
+        "topthink/think-captcha": "^3.0",
+        "topthink/think-queue": "^3.0",
+        "topthink/think-worker": "^3.0",
+        "phpmailer/phpmailer": "^6.6",
+        "phpoffice/phpspreadsheet": "^1.23",
+        "guzzlehttp/guzzle": "7.4.5",
+        "overtrue/pinyin": "^4.0",
+        "firebase/php-jwt": "^6.0",
+        "overtrue/wechat": "~4.0",
+        "yansongda/pay": "~3.0.26",
+        "php-di/php-di": "^6.3",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "ext-iconv": "*",
+        "ext-gd": "*",
+        "ext-zip": "*"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        },
+        "psr-0": {
+            "": "extend/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "easywechat-composer/easywechat-composer": true
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php think service:discover",
+            "@php think vendor:publish"
+        ]
+    }
+}

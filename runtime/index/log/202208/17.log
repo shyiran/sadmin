@@ -1,0 +1,5 @@
+[2022-08-17T15:08:12+08:00][sql] CONNECT:[ UseTime:0.005087s ] mysql:host=127.0.0.1;port=3306;dbname=swiftadmin;charset=utf8mb4
+[2022-08-17T15:08:12+08:00][sql] SHOW FULL COLUMNS FROM `sa_config` [ RunTime:0.006464s ]
+[2022-08-17T15:08:12+08:00][sql] SELECT * FROM `sa_config` [ RunTime:0.000551s ]
+[2022-08-17T15:08:12+08:00][sql] SELECT * FROM `sa_config` WHERE  `group` = 'site' [ RunTime:0.000868s ]
+[2022-08-17T15:08:12+08:00][sql] SELECT * FROM `sa_config` [ RunTime:0.000689s ]

@@ -1,0 +1,4 @@
+<?php
+//000000604800
+ exit();?>
+s:971:"a:2:{s:7:"captcha";a:1:{s:3:"key";s:60:"$2y$10$oZj7cQ1TygblvkECMb0yEOKgIOF25j5Iw.aVwtDlAhM1/sVL5nyxe";}s:10:"AdminLogin";a:25:{s:2:"id";i:1;s:8:"group_id";s:1:"1";s:13:"department_id";s:1:"2";s:7:"jobs_id";s:1:"3";s:4:"name";s:5:"admin";s:8:"nickname";s:6:"权栈";s:3:"pwd";s:32:"13682bec405cf4b9002e6e8306312ce6";s:3:"sex";i:1;s:4:"tags";s:77:"a:3:{i:0;s:12:"测试效果";i:1;s:15:"隔壁帅小伙";i:2;s:9:"技术宅";}";s:4:"face";s:44:"/upload/avatars/f8e34ec67a2a0233_100x100.jpg";s:4:"mood";s:27:"海阔天空，有容乃大";s:5:"email";s:20:"admin@swiftadmin.net";s:4:"area";s:4:"0310";s:6:"mobile";s:11:"15188888888";s:7:"content";s:18:"高级管理人员";s:5:"count";i:216;s:7:"address";s:18:"河北省邯郸市";s:8:"login_ip";s:9:"127.0.0.1";s:10:"login_time";i:1660720150;s:9:"create_ip";s:12:"192.168.76.1";s:6:"status";i:1;s:6:"banned";N;s:11:"create_time";s:19:"2020-08-06 11:00:35";s:11:"update_time";s:19:"2022-08-17 15:09:10";s:11:"delete_time";N;}}";

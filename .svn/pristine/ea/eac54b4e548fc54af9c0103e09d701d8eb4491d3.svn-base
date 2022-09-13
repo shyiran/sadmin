@@ -1,0 +1,31 @@
+{
+  "php_ext": "opcache,redis,fileinfo,imagemagick,imagemagick",
+  "chmod": [
+    {
+      "mode": 775,
+      "path": "/public"
+    },
+    {
+      "mode": 775,
+      "path": "/runtime"
+    },
+    {
+      "mode": 775,
+      "path": "/extend"
+    }
+  ],
+  "success_url": "/index.php",
+  "php_versions": "73,74,80",
+  "db_config": "",
+  "admin_username": "",
+  "admin_password": "",
+  "run_path": "/public",
+  "remove_file": [
+    "/temp",
+    "/.user.ini"
+  ],
+  "enable_functions": [
+    "system",
+    "exec"
+  ]
+}
