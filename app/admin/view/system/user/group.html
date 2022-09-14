@@ -1,5 +1,4 @@
 <include file="/public/header"/>
-
 <div class="layui-fluid">
     <div class="layui-card">
         <!-- // 默认操作按钮 -->
@@ -23,19 +22,16 @@
                     </div>
                     <div class="layui-inline">
                         <!-- // 默认搜索 -->
-                        <button class="layui-btn icon-btn" lay-filter="formSearch" lay-submit><i
-                                class="layui-icon layui-icon-search"></i>{:__('搜索')}
+                        <button class="layui-btn icon-btn" lay-filter="formSearch" lay-submit><i class="layui-icon layui-icon-search"></i>{:__('搜索')}
                         </button>
                         <!-- // 打开添加页面 -->
-                        <button class="layui-btn icon-btn" lay-open="" data-title="{:__('添加会员组')}" data-area="500px"
-                                data-url="#editforms">
+                        <button class="layui-btn icon-btn" lay-open="" data-title="{:__('添加会员组')}" data-area="500px" data-url="#editforms">
                             <i class="layui-icon layui-icon-add-1"></i>{:__('添加')}
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- // 创建数据表实例 -->
         <table id="lay-tableList" lay-filter="lay-tableList"></table>
     </div>
@@ -46,28 +42,23 @@
     <div class="layui-fluid layui-bg-white">
         <form class="layui-form layui-form-fixed" lay-filter="editforms">
             <input type="text" name="id" hidden="">
-
             <div class="layui-form-item">
                 <label class="layui-form-label"><font color="red">* </font>{:__('会员组名称')}</label>
                 <div class="layui-input-block">
-                    <input name="title" placeholder="{:__('请输入会员组名称')}" type="text" class="layui-input"
-                           lay-verify="required"/>
+                    <input name="title" placeholder="{:__('请输入会员组名称')}" type="text" class="layui-input" lay-verify="required"/>
                 </div>
             </div>
-
             <div class="layui-form-item">
                 <label class="layui-form-label">{:__('会员组标识')}</label>
                 <div class="layui-input-block">
-                    <input name="alias" placeholder="{:__('请输入会员组标识')}" type="text" class="layui-input"
-                           lay-verify="required"/>
+                    <input name="alias" placeholder="{:__('请输入会员组标识')}" type="text" class="layui-input" lay-verify="required"/>
                 </div>
             </div>
 
             <div class="layui-form-item">
                 <label class="layui-form-label">{:__('会员组积分')}</label>
                 <div class="layui-input-block">
-                    <input name="score" placeholder="{:__('请输入会员组积分')}" type="text" class="layui-input"
-                           lay-verify="required"/>
+                    <input name="score" placeholder="{:__('请输入会员组积分')}" type="text" class="layui-input" lay-verify="required"/>
                 </div>
             </div>
 
@@ -89,36 +80,25 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">{:__('会员组备注')}</label>
                 <div class="layui-input-block">
-            <textarea name="content" id="content" cols="30" rows="10"
-                      style="min-height: 110px;" placeholder="{:__('请输入会员组备注')}" class="layui-textarea"
-                      lay-verify="required"></textarea>
+            <textarea name="content" id="content" cols="30" rows="10" style="min-height: 110px;" placeholder="{:__('请输入会员组备注')}" class="layui-textarea" lay-verify="required"></textarea>
                 </div>
             </div>
 
             <div class="layui-footer layui-form-item layui-center">
-                <button class="layui-btn layui-btn-primary" type="button" sa-event="closePageDialog">{:__('取消')}
-                </button>
-                <button class="layui-btn" lay-add="{:url('/system.userGroup/add')}"
-                        lay-edit="{:url('/system.userGroup/edit')}" lay-filter="submitPage" lay-submit>{:__('提交')}
-                </button>
+                <button class="layui-btn layui-btn-primary" type="button" sa-event="closePageDialog">{:__('取消')}</button>
+                <button class="layui-btn" lay-add="{:url('/system.userGroup/add')}" lay-edit="{:url('/system.userGroup/edit')}" lay-filter="submitPage" lay-submit>{:__('提交')}</button>
             </div>
         </form>
     </div>
 </script>
-
 <!-- // 列表工具栏 -->
 <script type="text/html" id="tableBar">
-    <a class="layui-table-text" data-title="{:__('编辑')} {{d.title}}" data-area="500px" data-url="#editforms"
-       lay-event="edit">{:__('编辑')}</a>
-    <div class="layui-divider layui-divider-vertical"></div>
-    <a class="layui-table-text" data-url="{:url('/system.userGroup/del')}?id={{d.id}}" lay-event="del">{:__('删除')}</a>
+    <a class="layui-table-text" data-title="{:__('编辑')} {{d.title}}" data-area="500px" data-url="#editforms" lay-event="edit">{:__('编辑')}</a>
+    <div class="layui-divider layui-divider-vertical"></div><a class="layui-table-text" data-url="{:url('/system.userGroup/del')}?id={{d.id}}" lay-event="del">{:__('删除')}</a>
 </script>
-
-
 <include file="/public/footer"/>
 <script>
     layui.use(['table'], function () {
-
         var table = layui.table;
         /*
          * 初始化表格
@@ -145,5 +125,4 @@
         })
 
     });
-
 </script>

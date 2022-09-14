@@ -1,16 +1,7 @@
 <?php
-declare (strict_types = 1);
-// +----------------------------------------------------------------------
-// | swiftAdmin 极速开发框架 [基于ThinkPHP6开发]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2020-2030 http://www.swiftadmin.net
-// +----------------------------------------------------------------------
-// | swiftAdmin.net High Speed Development Framework
-// +----------------------------------------------------------------------
-// | Author: meystack <coolsec@foxmail.com> Apache 2.0 License Code
-// +----------------------------------------------------------------------
-namespace app\admin\controller;
+declare (strict_types=1);
 
+namespace app\admin\controller;
 
 use app\AdminController;
 use app\common\library\Upload;
@@ -22,17 +13,17 @@ use app\common\library\Upload;
  */
 class Ajax extends AdminController
 {
-    public function initialize()
+    public function initialize ()
     {
-        parent::initialize();
+        parent::initialize ();
     }
 
     /**
      * @return mixed|\think\response\View
      */
-    public function index()
+    public function index ()
     {
-        return $this->success();
+        return $this->success ();
     }
 
     /**
@@ -40,47 +31,37 @@ class Ajax extends AdminController
      * @return mixed|\think\response\Json|void
      * @throws \Exception
      */
-	public function upload()
-	{
-        if (request()->isPost()) {
-
+    public function upload ()
+    {
+        if (request ()->isPost ()) {
             try {
-
-
-                $uploadFiles = Upload::instance()->upload();
+                $uploadFiles = Upload::instance ()->upload ();
             } catch (\Throwable $th) {
-                return $this->error(Upload::instance()->getError() ?: $th->getMessage());
+                return $this->error (Upload::instance ()->getError () ?: $th->getMessage ());
             }
-
             if (!empty($uploadFiles)) {
-                return json($uploadFiles);
+                return json ($uploadFiles);
             }
         }
-
-        $this->throwError();
-		
-	}
+        $this->throwError ();
+    }
 
     /**
      * 远程下载图片
      * @return mixed|\think\response\Json|void
      */
-    public function getImage()
+    public function getImage ()
     {
-        if (request()->isPost()) {
-
+        if (request ()->isPost ()) {
             try {
-                $uploadFiles = Upload::instance()->download(input('url'));
+                $uploadFiles = Upload::instance ()->download (input ('url'));
             } catch (\Throwable $th) {
-                return $this->error(Upload::instance()->getError() ?: $th->getMessage());
+                return $this->error (Upload::instance ()->getError () ?: $th->getMessage ());
             }
-
             if (!empty($uploadFiles)) {
-                return json($uploadFiles);
+                return json ($uploadFiles);
             }
         }
-
-        $this->throwError();
+        $this->throwError ();
     }
-
 }

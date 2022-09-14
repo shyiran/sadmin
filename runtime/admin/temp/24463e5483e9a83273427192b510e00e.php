@@ -1,4 +1,4 @@
-<?php /*a:1:{s:45:"D:\SwiftAdmin\app\admin\view\index\index.html";i:1659669829;}*/ ?>
+<?php /*a:1:{s:45:"D:\SwiftAdmin\app\admin\view\index\index.html";i:1663056419;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -111,8 +111,7 @@
                 <h1>Swift Admin Pro</h1>
             </div>
             <!-- // 侧边菜单 -->
-            <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="lay-side-menu" lay-accordion="true"
-                lay-statichtml="false"></ul>
+            <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="lay-side-menu" lay-accordion="true" lay-statichtml="false"></ul>
         </div>
     </div>
     <!-- 内容主体区域 -->

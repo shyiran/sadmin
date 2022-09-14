@@ -1,0 +1,8 @@
+/.idea
+/.vscode
+*.log
+.svn
+runtime
+.editorconfig
+.env
+.travis.yml

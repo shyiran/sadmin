@@ -1,4 +1,4 @@
-<?php /*a:4:{s:45:"D:\SwiftAdmin\app\index\view\index\index.html";i:1659669829;s:47:"D:\SwiftAdmin\app\index\view\public\header.html";i:1659669829;s:44:"D:\SwiftAdmin\app\index\view\public\nav.html";i:1659669829;s:47:"D:\SwiftAdmin\app\index\view\public\footer.html";i:1659669829;}*/ ?>
+<?php /*a:4:{s:45:"D:\SwiftAdmin\app\index\view\index\index.html";i:1663056208;s:47:"D:\SwiftAdmin\app\index\view\public\header.html";i:1659669829;s:44:"D:\SwiftAdmin\app\index\view\public\nav.html";i:1663056248;s:47:"D:\SwiftAdmin\app\index\view\public\footer.html";i:1663056217;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,22 +29,20 @@
 		<ul class="layui-nav">
 			<li class="layui-nav-item active"><a href="/" class="nav-link">主页</a></li>
 			<li class="layui-nav-item "><a href="#" onclick="layer.msg('感谢您使用SAPHP<br><br>您可以尽情在此框架上二次开发');" class="nav-link">关于</a></li>
-			<li class="layui-nav-item "><a href="https://www.swiftadmin.net/plugin/" class="nav-link">插件市场</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="https://www.swiftadmin.net/agreement.html" class="nav-link">使用协议</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="https://doc.swiftadmin.net/help/" class="nav-link">帮助文档</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="https://ask.swiftadmin.net/" class="nav-link">社区中心</a></li>
-			<li class="layui-nav-item layui-hide-xs"><a href="https://qm.qq.com/cgi-bin/qm/qr?k=rUxEL3_DV8PnflvZiJamjED0dfHwpiMw&jump_from=webapi" target="_blank" class="nav-link">联系我们</a></li>
+			<li class="layui-nav-item "><a href="#" class="nav-link">插件市场</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="#" class="nav-link">使用协议</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="#" class="nav-link">帮助文档</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="#" class="nav-link">社区中心</a></li>
+			<li class="layui-nav-item layui-hide-xs"><a href="#" target="_blank" class="nav-link">联系我们</a></li>
 		</ul>
-
 		<div class="layui-nav layui-hide-xs fr" id="login">
 			<?php if(!(empty($user['id']) || (($user['id'] instanceof \think\Collection || $user['id'] instanceof \think\Paginator ) && $user['id']->isEmpty()))): ?> <li class="layui-nav-item"><a class="" href="/user/index" >会员中心</a></li> <?php else: ?>
-			<li class="layui-nav-item"><a href="javascript:;" lay-open data-title="用户注册" data-area="490px" data-url="/user/register" >注册</a></li>
-			<li class="layui-nav-item"><a href="javascript:;" lay-open data-title="用户登录" data-area="450px,420px" data-url="/user/login" >登录</a></li>
+				<li class="layui-nav-item"><a href="javascript:;" lay-open data-title="用户注册" data-area="490px" data-url="/user/register" >注册</a></li>
+				<li class="layui-nav-item"><a href="javascript:;" lay-open data-title="用户登录" data-area="450px,420px" data-url="/user/login" >登录</a></li>
 			<?php endif; ?>
 		</div>
 	</div>
 </div>
-
 <div id="content" >
 	<div class="layui-container">
 	  <div class="layui-row">
@@ -74,13 +72,11 @@
 	      <img src="/static/images/hero-img.png" width="90%" height="500" alt="">
 	    </div>
 	  </div>
-
 	</div>
 </div>
-
 <div id="footer" >
 	<div class="layui-footer" >
-		<div style="text-align: center;"> copyright © 2020 www.swiftadmin.net all rights reserved.</div>
+		<div style="text-align: center;"> copyright © 2020 www.XXX.net all rights reserved.</div>
 	</div>
 </div>
 </body>
