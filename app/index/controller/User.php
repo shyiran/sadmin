@@ -1,17 +1,6 @@
 <?php
-
 declare(strict_types=1);
-// +----------------------------------------------------------------------
-// | swiftAdmin 极速开发框架 [基于ThinkPHP6开发]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2020-2030 http://www.swiftadmin.net
-// +----------------------------------------------------------------------
-// | swiftAdmin.net High Speed Development Framework
-// +----------------------------------------------------------------------
-// | Author: meystack <coolsec@foxmail.com>  MIT License Code
-// +----------------------------------------------------------------------
 namespace app\index\controller;
-
 use app\HomeController;
 use system\Random;
 use app\common\library\Sms;
