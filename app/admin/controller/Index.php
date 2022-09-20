@@ -63,7 +63,6 @@ class Index extends AdminController
         $dateAfter = date ('Y-m-d 23:59:59');
 
         if (request ()->isPost ()) {
-
             $cycle = safe_input ('cycle');
             if (Event::hasListener ('cms_user_echarts')) {
                 [ $dataList, $seriesList ] = Event::trigger ('cms_user_echarts', $cycle, true);
@@ -134,10 +133,8 @@ class Index extends AdminController
                 ];
             }
         }
-
         $userGroupData[] = [ 'name' => '性别(男)', 'value' => User::where ('gender', 1)->count () ];
         $userGroupData[] = [ 'name' => '性别(女)', 'value' => User::where ('gender', 0)->count () ];
-
         // 搜索词云数据
         if (Event::hasListener ('cms_hot_search')) {
             $searchWords = Event::trigger ('cms_hot_search', null, true);
@@ -149,10 +146,8 @@ class Index extends AdminController
                 ];
             }
         }
-
         $pluginList = get_plugin_list ();
         $tableList = Db::query ('SHOW TABLE STATUS');
-
         $assetsInfo = [
             'pluginCount' => count ($pluginList),
             'pluginRunning' => array_sum (array_column ($pluginList, 'status')),
@@ -163,7 +158,6 @@ class Index extends AdminController
             'attachmentCount' => Attachment::count (),
             'attachmentSize' => format_bytes ((int)Attachment::sum ('filesize')),
         ];
-
         $theLogsCount = Db::name ('system_log')->count ('id');
         $exceptionCount = Db::name ('system_log')->where ('line', '>', 0)->count ('id');
         $devOpsData = [
@@ -180,7 +174,6 @@ class Index extends AdminController
             User::count ('id'),
             UserThird::count ('id'),
         ];
-
         return view ('', [
             'assetsInfo' => $assetsInfo,
             'workplace' => Event::trigger ('cms_workplace', [], true) ?? [],
@@ -262,13 +255,10 @@ class Index extends AdminController
     public function baseSet (array $config = [])
     {
         if (request ()->isPost ()) {
-
             $post = input ();
             $list = Config::select ()->toArray ();
             foreach ($list as $key => $value) {
-
                 $name = $value['name'];
-
                 // 字段必须存在
                 if (isset($post[$name])) {
                     $option['id'] = $value['id'];
@@ -277,17 +267,13 @@ class Index extends AdminController
                     } else {
                         $option['value'] = $post[$name];
                     }
-
                     $config[$key] = $option;
                 }
             }
-
             try {
-
                 (new Config())->saveAll ($config);
                 $index = public_path () . 'index.php';
                 $files = '../extend/conf/index.tpl';
-
                 if ($post['site_status']) {
                     $close = '../extend/conf/close.tpl';
                     $content = file_get_contents ($close);
@@ -299,7 +285,6 @@ class Index extends AdminController
                         write_file ($index, $content);
                     }
                 }
-
                 // 配置文件路径
                 $env = root_path () . '.env';
                 $parse = parse_ini_file ($env, true);
@@ -309,16 +294,13 @@ class Index extends AdminController
                 $parse['CACHE']['SELECT'] = max ($post['cache_select'], 1);
                 $parse['CACHE']['USERNAME'] = $post['cache_user'];
                 $parse['CACHE']['PASSWORD'] = $post['cache_pass'];
-
                 $content = parse_array_ini ($parse);
                 if (write_file ($env, $content)) {
                     Cache::set ('redis-sys_', $post, config ('cookie.expire'));
                 }
-
             } catch (\Throwable $th) {
                 return $this->error ($th->getMessage ());
             }
-
             return $this->success ('保存成功!');
         }
     }
@@ -333,7 +315,6 @@ class Index extends AdminController
                 return $this->success ('上传测试成功！');
             }
         }
-
         return $this->error ('上传测试失败！');
     }
 
@@ -354,19 +335,16 @@ class Index extends AdminController
     public function testCache ()
     {
         if (request ()->isPost ()) {
-
             $param = input ();
             if (!isset($param['type']) || empty($param['host']) || empty($param['port'])) {
                 return $this->error ('参数错误!');
             }
-
             $options = [
                 'host' => $param['host'],
                 'port' => (int)$param['port'],
                 'username' => $param['user'],
                 'password' => $param['pass']
             ];
-
             try {
                 if (strtolower ($param['type']) == 'redis') {
                     $drive = new Redis($options);
@@ -376,14 +354,12 @@ class Index extends AdminController
             } catch (Throwable $th) {
                 return $this->error ($th->getMessage ());
             }
-
             if ($drive->set ('test', 'cacheOK', 1000)) {
                 return $this->success ('缓存测试成功！');
             } else {
                 return $this->error ('缓存测试失败！');
             }
         }
-
         return false;
     }
 }

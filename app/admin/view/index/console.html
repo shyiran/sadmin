@@ -4,20 +4,16 @@
         overflow: hidden;
         margin-bottom: 10px;
     }
-
     .echartsOrder {
         margin-right: 10px;
     }
-
     .echartsOrder:hover, .echartsOrder.active {
         color: #1890ff;
     }
 </style>
 
 <div class="layui-fluid ">
-
     <div class="layui-row layui-col-space10">
-
         <div class="layui-col-md8">
             <!-- 填充内容 -->
             <div class="layui-card">
@@ -55,7 +51,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-body" style="padding: 20px;">
@@ -87,9 +82,7 @@
             </div>
         </div>
     </div>
-
     <div class="layui-row layui-col-space10" style="margin-bottom: 0;">
-
         <div class="layui-col-md4">
             <div class="layui-row layui-col-space10" style="margin-bottom: 5px;">
                 <div class="layui-col-xs6 layui-col-sm6">
@@ -169,9 +162,7 @@
             </div>
         </div>
     </div>
-
     <div class="layui-row layui-col-space10">
-
         <div class="layui-col-md8">
             <div class="layui-card">
                 <div class="layui-card-header">注册登录概览
@@ -199,7 +190,6 @@
         </div>
     </div>
     <div class="layui-row layui-col-space10">
-
         <div class="layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-header">热搜统计 (CMS)</div>
@@ -209,7 +199,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-header">资产报表</div>
@@ -284,7 +273,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-md4">
             <div class="layui-card" id="console">
                 <div class="layui-card-header">DEVOPS 统计<span class="layui-badge layui-badge-blue pull-right">总</span></div>
@@ -299,15 +287,11 @@
 <script src="__STATICADMIN__module/echarts/echarts.js"></script>
 <script src="__STATICADMIN__module/echarts/echarts-wordcloud.js"></script>
 <script src="__STATICADMIN__module/echarts/china.js"></script>
-
 <include file="/public/footer"/>
-
 <script>
     layui.use(['jquery','layer'], function () {
-
         let $ = layui.jquery;
         let layer = layui.layer;
-
         /**
          * 用户统计报表
          * @type {string}
@@ -467,7 +451,6 @@
             userGroupCharts.resize();
         };
     })
-
 </script>
 </body>
 </html>

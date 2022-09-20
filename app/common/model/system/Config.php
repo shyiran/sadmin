@@ -41,7 +41,6 @@ class Config extends Model
                 $config[$option['name']] = $option['value'];
             }
         }
-
         return $config;
     }
 }

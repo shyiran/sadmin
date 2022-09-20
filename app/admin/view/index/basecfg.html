@@ -4,55 +4,44 @@
         .layui-form-item .layui-input-inline {
             width: 300px;
         }
-
         table {
             border: 1px solid #e6e6e6;
         }
-
         table td {
             padding: 5px;
             padding-left: 8px;
             border: 1px solid #e6e6e6;
         }
-
         table td .layui-form-radio>i {
             font-size: 18px;
         }
-
         table td .layui-form-radio {
             margin: 0;
             padding: 0;
         }
-
         .layui-colla-title {
             height: 50px;
             line-height: 50px;
             padding-left: 10px;
         }
-
         .layui-colla-content {
             overflow: hidden;
             /* padding: 20px; */
         }
-
         .layui-colla-title {
             background-color: #fff;
         }
-
         .layui-colla-content,
         .layui-colla-item {
             border: none;
             /* margin-bottom: 5px; */
         }
-
         .layui-collapse .layui-colla-item .layui-colla-title i.layui-icon {
             margin-right: 5px;
         }
-
         .layui-colla-icon {
             display: none;
         }
-
         .layui-card-header .layui-icon {
             left: 5px;
             position: unset;
@@ -494,11 +483,8 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <!-- 腾讯云上传 -->
-                                    <div class="qcloud_oss" <neq name="$config['cloud_type']" value="qcloud_oss">
-                                        style="display:none;" </neq> >
-
+                                    <div class="qcloud_oss" <neq name="$config['cloud_type']" value="qcloud_oss"> style="display:none;" </neq> >
                                         <div class="layui-form-item">
                                             <label class="layui-form-label">app_id</label>
                                             <div class="layui-input-inline">
@@ -1482,27 +1468,21 @@
         </div>
     </div>
 </div>
-
-
 <include file="/public/footer" />
-
 <script>
     layui.use(['form', 'jquery', 'layedit', 'admin'], function () {
-
         var form = layui.form;
         var admin = layui.admin;
         var jquery = layui.jquery;
         // 渲染富文本编辑器
         var layedit = layui.layedit;
         var layindex = layedit.build('site_notice', { height: 110, color: '#ffffff' });
-
         // 异步验证表单
         form.verify({
             siteClose: function (value) {
                 return layedit.sync(layindex);
             }
         });
-
         // 增加变量
         jquery('.layui-variable-add').on('click', function () {
             var html = '<tr>';
@@ -1512,14 +1492,12 @@
             html += '<\/tr>';
             jquery('#layui-variable-content').append(html);
         })
-
         // 改变表单值
         jquery('body').on('change', '.layui-variable-key', function () {
             var that = jquery(this),
                 name = 'variable[' + that.val() + ']';
             jquery(that).parents('tr').find('.layui-variable-value').attr('name', name);
         })
-
         // 删除自定义变量
         jquery('body').on('click', '#layui-variable-content .layui-btn', function () {
             jquery(this).parents('tr').remove();
@@ -1527,5 +1505,4 @@
     });
 </script>
 </body>
-
 </html>

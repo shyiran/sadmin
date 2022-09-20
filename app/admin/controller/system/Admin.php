@@ -63,33 +63,27 @@ class Admin extends AdminController
     {
         // 判断isAjax
         if (request ()->isAjax ()) {
-
             // 获取数据
             $post = input ();
             $page = input ('page/d') ?? 1;
             $limit = input ('limit/d') ?? 10;
             $status = !empty($post['status']) ? $post['status'] - 1 : 1;
-
             // 生成查询条件
             $where = array();
             if (!empty($post['name'])) {
                 $where[] = [ 'name', 'like', '%' . $post['name'] . '%' ];
             }
-
             if (!empty($post['dep'])) {
                 $where[] = [ 'department_id', 'find in set', $post['dep'] ];
             }
-
             if (!empty($post['group_id'])) {
                 $where[] = [ 'group_id', 'find in set', $post['group_id'] ];
             }
-
             // 生成查询数据
             $where[] = [ 'status', '=', $status ];
             $count = $this->model->where ($where)->count ();
             $page = ($count <= $limit) ? 1 : $page;
             $list = $this->model->where ($where)->order ("id asc")->withoutField ('pwd')->limit ($limit)->page ($page)->select ()->toArray ();
-
             // 循环处理数据
             foreach ($list as $key => $value) {
                 $groupIDs = explode (',', $value['group_id']);
@@ -100,21 +94,16 @@ class Admin extends AdminController
                         $list[$key]['group'][$field] = $result;
                     }
                 }
-
                 if (!empty($list[$key]['group'])) {
                     $list[$key]['group'] = list_sort_by ($list[$key]['group'], 'id');
                 }
-
                 $authNodes = $this->auth->getRulesNode ($value['id']);
                 $list[$key][AUTH_RULES] = $authNodes[$this->auth->authPrivate];
-
                 $authNodes = $this->auth->getRulesNode ($value['id'], AUTH_CATE);
                 $list[$key][AUTH_CATE] = $authNodes[$this->auth->authPrivate];
             }
-
             return $this->success ('查询成功', null, $list, $count);
         }
-
         return view ('', [
             'jobs' => $this->jobs,
             'group' => $this->group,

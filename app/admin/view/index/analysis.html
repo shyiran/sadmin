@@ -89,7 +89,6 @@
   <div style="clear: both;"></div>
 </div>
 </div>
-
 <!-- js部分 -->
 <include file="/public/footer" />
 <script src="__STATICADMIN__module/echarts/echarts.js"></script>
@@ -100,7 +99,6 @@
     layui.use(['layer'], function () {
         var $ = layui.jquery;
         var layer = layui.layer;
-
         // 访问量
         var fwlCharts = echarts.init(document.getElementById('fwl'));
 		var fwlOptions = {
@@ -160,13 +158,10 @@
 		            data: [120, 132, 156, 200, 90, 100, 165]
 		        },
 		    ]
-		};    	
-
-		fwlCharts.setOption(fwlOptions);    
-
+		};
+		fwlCharts.setOption(fwlOptions);
         // 渲染表信息
         var zfbsCharts = echarts.init(document.getElementById('zfbs'));
-
         var zfbsOptions = {
             color: ['#1890ff','#666'],
             tooltip: {},
@@ -191,10 +186,8 @@
         }
 
         zfbsCharts.setOption(zfbsOptions);
-
         // 渲染表信息
         var mapCharts = echarts.init(document.getElementById('map'));
-
         var dataList=[
             {name:"南海诸岛",value:0},
             {name: '北京', value: randomValue()},
@@ -393,5 +386,4 @@
     });
 </script>
 </body>
-
 </html>

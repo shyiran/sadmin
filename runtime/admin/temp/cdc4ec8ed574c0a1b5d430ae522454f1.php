@@ -1,5 +1,4 @@
-<?php /*a:3:{s:47:"D:\SwiftAdmin\app\admin\view\index\monitor.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
-
+<?php /*a:3:{s:47:"D:\SwiftAdmin\app\admin\view\index\monitor.html";i:1663670423;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,9 +37,7 @@
                     <div class="layui-row">
                         <div class="layui-col-xs12 layui-col-sm6 layui-col-lg3 text-center">
                             <div class="numberInfoSubTitle">今日交易总额</div>
-                            <div class="numberInfoValue">
-                                124,543,233<em class="numberInfoSuffix">元</em>
-                            </div>
+                            <div class="numberInfoValue"> 124,543,233<em class="numberInfoSuffix">元</em></div>
                         </div>
                         <div class="layui-col-xs12 layui-col-sm6 layui-col-lg3 text-center">
                             <div class="numberInfoSubTitle">销售目标完成率</div>
@@ -52,19 +49,15 @@
                         </div>
                         <div class="layui-col-xs12 layui-col-sm6 layui-col-lg3 text-center">
                             <div class="numberInfoSubTitle">每秒交易总额</div>
-                            <div class="numberInfoValue">
-                                234<em class="numberInfoSuffix">元</em>
-                            </div>
+                            <div class="numberInfoValue">234<em class="numberInfoSuffix">元</em></div>
                         </div>
                     </div>
                     <div style="text-align: center;padding: 30px 0 10px 0;">
-                        <img src="https://gw.alipayobjects.com/zos/rmsportal/HBWnDEUXCnGnGrRfrpKa.png"
-                             style="max-height: 437px; max-width: 100%;" alt="map">
+                        <img src="https://gw.alipayobjects.com/zos/rmsportal/HBWnDEUXCnGnGrRfrpKa.png" style="max-height: 437px; max-width: 100%;" alt="map">
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="layui-col-xs12 layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-header">活动情况预测</div>
@@ -79,7 +72,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-xs12">
             <div class="layui-card">
                 <div class="layui-card-body">
