@@ -1,31 +1,33 @@
-<?php /*a:3:{s:48:"D:\SwiftAdmin\app\admin\view\index\analysis.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
+<?php /*a:3:{s:48:"D:\SwiftAdmin\app\admin\view\index\analysis.html";i:1663670847;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1664337374;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>SwiftAdmin 后台管理开发框架</title>
-	<link href="/favicon.ico" rel="icon">
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="/static/system/layui/css/layui.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css" />
-	 <link href="/static/system/css/style.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css" />
-	<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <meta charset="utf-8">
+    <title>SwiftAdmin 后台管理开发框架</title>
+    <link href="/favicon.ico" rel="icon">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/static/system/layui/css/layui.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css"/>
+    <link href="/static/system/css/style.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css"/>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <script>
-	var _global_ = {
-		app: "<?php echo htmlentities((isset($app) && ($app !== '')?$app:'admin.php')); ?>",
-		controller: "<?php echo htmlentities((isset($controller) && ($controller !== '')?$controller:'index')); ?>",
-		action: "<?php echo htmlentities((isset($action) && ($action !== '')?$action:'index')); ?>",
-		api: "<?php echo config('app.api_url'); ?>"
-	};
+    var _global_ = {
+        app: "<?php echo htmlentities((isset($app) && ($app !== '')?$app:'admin.php')); ?>",
+        controller: "<?php echo htmlentities((isset($controller) && ($controller !== '')?$controller:'index')); ?>",
+        action: "<?php echo htmlentities((isset($action) && ($action !== '')?$action:'index')); ?>",
+        api: "<?php echo config('app.api_url'); ?>"
+    };
 
-	var _upload_chunkSize =  <?php echo saenv('upload_chunk_size'); ?>;
+    var _upload_chunkSize = {
+    :
+    saenv('upload_chunk_size')
+    };
 </script>
-
 <body>
 <!-- 正文开始 -->
 <div class="layui-fluid" id="LAY-component-grid-all">
@@ -117,7 +119,6 @@
   <div style="clear: both;"></div>
 </div>
 </div>
-
 <!-- js部分 -->
 <!--// 加载Markdown编辑器-->
 <script src="/static/js/markdown/cherry-markdown.min.js?v=<?php echo release(); ?>"></script>
@@ -140,7 +141,6 @@
     layui.use(['layer'], function () {
         var $ = layui.jquery;
         var layer = layui.layer;
-
         // 访问量
         var fwlCharts = echarts.init(document.getElementById('fwl'));
 		var fwlOptions = {
@@ -200,13 +200,10 @@
 		            data: [120, 132, 156, 200, 90, 100, 165]
 		        },
 		    ]
-		};    	
-
-		fwlCharts.setOption(fwlOptions);    
-
+		};
+		fwlCharts.setOption(fwlOptions);
         // 渲染表信息
         var zfbsCharts = echarts.init(document.getElementById('zfbs'));
-
         var zfbsOptions = {
             color: ['#1890ff','#666'],
             tooltip: {},
@@ -231,10 +228,8 @@
         }
 
         zfbsCharts.setOption(zfbsOptions);
-
         // 渲染表信息
         var mapCharts = echarts.init(document.getElementById('map'));
-
         var dataList=[
             {name:"南海诸岛",value:0},
             {name: '北京', value: randomValue()},
@@ -433,5 +428,4 @@
     });
 </script>
 </body>
-
 </html>

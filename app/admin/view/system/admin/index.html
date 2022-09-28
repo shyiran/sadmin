@@ -46,7 +46,6 @@
             <div class="layui-card-header layadmin-card-header-auto ">
             <div class="layui-form">
                 <div class="layui-form-item">
-
                 <div class="layui-inline">
                     <div class="layui-input-inline">
                         <select name="group_id">
@@ -54,8 +53,7 @@
                             <volist name="group" id="vo"><option value="{$vo.id}" >{$vo.title}</option></volist>
                         </select>
                     </div>
-                </div> 
-
+                </div>
                 <div class="layui-inline">
                     <div class="layui-input-inline">
                         <select name="status">
@@ -63,13 +61,11 @@
                             <option value="2" >{:__('正常')}</option>                                 
                             <option value="1" >{:__('关闭')}</option>                             
                         </select>
-                    </div>  
+                    </div>
                 </div>
-
                 <div class="layui-inline"><div class="layui-input-inline ">
                     <input name="name" class="layui-input" type="text" placeholder="{:__('关键字搜索')}"/></div>
                 </div>
-
                 <div class="layui-inline" >
                     <!-- // 默认搜索 -->
                     <button class="layui-btn icon-btn" lay-filter="formSearch" lay-submit><i class="layui-icon layui-icon-search"></i>{:__('搜索')}</button>
@@ -81,13 +77,11 @@
                 </div>
             </div>   
             </div>
-
             <!-- // 创建数据实例 -->
             <table id="lay-tableList" lay-filter="lay-tableList"></table>        
         </div>
     </div>
 </div>
-
 <!-- // 添加编辑数据 -->
 <script type="text/html" id="adminforms" >
 <div class="layui-fluid layui-bg-white">
@@ -98,13 +92,11 @@
         <div class="layui-input-inline">
             <input name="name" placeholder="{:__('请输入用户名')}" type="text" class="layui-input"  lay-verify="required" />
         </div>
-
         <label class="layui-form-label">{:__('手机号')}</label>
         <div class="layui-input-inline">
             <input name="mobile" placeholder="{:__('请输入手机号')}" type="text" class="layui-input"  lay-verify="required|phone" />
         </div>
     </div>
-
     <div class="layui-form-item">
         <label class="layui-form-label">{:__('密码')}</label>
         <div class="layui-input-inline">
@@ -115,7 +107,6 @@
             <input name="email" placeholder="{:__('请输入邮箱地址')}" type="text" class="layui-input"  lay-verify="required|email"/>
         </div>
     </div>
-
     <div class="layui-form-item">
         <label class="layui-form-label">{:__('性别')}</label>
         <div class="layui-input-inline">
@@ -129,21 +120,18 @@
         <div class="layui-input-inline">
             <input name="nickname" placeholder="{:__('请输入用户昵称')}" type="text" class="layui-input" />
         </div>
-    </div>   
-
+    </div>
     <div class="layui-form-item">
         <label class="layui-form-label">{:__('角色权限')}</label>
         <div class="layui-input-inline">
             <div class="group" name="group_id" ></div>
         </div>
-
         <label class="layui-form-label">{:__('状态')}</label>
         <div class="layui-input-inline">
             <input name="status" type="radio" value="1" title="{:__('正常')}" checked/>
             <input name="status" type="radio" value="0" title="{:__('关闭')}"/>
         </div>
     </div>
-
     <div class="layui-form-item">
         <label class="layui-form-label">{:__('归属部门')}</label>
         <div class="layui-input-inline">
@@ -154,7 +142,6 @@
             <div class="jobs" name="jobs_id" ></div>
         </div>
     </div>
-
     <div class="layui-form-item">
         <label class="layui-form-label">{:__('用户备注')}</label>
         <div class="layui-input-block">
@@ -162,17 +149,14 @@
             placeholder="{:__('请输入用户备注')}" class="layui-textarea"></textarea>
         </div>
     </div>
-
     <div class="layui-footer layui-form-item layui-center "  >
         <button class="layui-btn layui-btn-primary" type="button" sa-event="closePageDialog" >{:__('取消')}</button>
         <button class="layui-btn" lay-add="{:url('/system.admin/add')}" lay-edit="{:url('/system.admin/edit')}" lay-filter="submitPage" 
         lay-submit>{:__('提交')}</button>
     </div>
-
     </form>
 </div>
 </script>
-
 <!-- // 编辑权限列表 -->
 <script type="text/html" id="authForms">
 <div class="layui-fluid layui-bg-white" >
@@ -185,20 +169,16 @@
     </form>
 </div>
 </script>
-
 <!-- // 列表编辑框 -->
 <script type="text/html" id="tableBar"> 
     <a class="layui-table-text" data-title="{:__('编辑')} {{d.name}}" callback="edits" data-url="#adminforms" data-area="690px" lay-event="edit" >{:__('编辑')}</a>
     <div class="layui-divider layui-divider-vertical"></div>
-    <a class="layui-table-text" data-title="{:__('访问授权')}" 
-        callback="rulecates" data-url="#authForms" data-area="300px" data-offset="8%" lay-event="rules" >{:__('权限')}</a>
+    <a class="layui-table-text" data-title="{:__('访问授权')}" callback="rulecates" data-url="#authForms" data-area="300px" data-offset="8%" lay-event="rules" >{:__('权限')}</a>
     <div class="layui-divider layui-divider-vertical"></div>
-    <a class="layui-table-text" data-title="{:__('栏目授权')}" 
-        callback="rulecates" data-url="#authForms" data-area="300px" data-offset="8%" lay-event="cates" >{:__('栏目')}</a>
+    <a class="layui-table-text" data-title="{:__('栏目授权')}" callback="rulecates" data-url="#authForms" data-area="300px" data-offset="8%" lay-event="cates" >{:__('栏目')}</a>
     <div class="layui-divider layui-divider-vertical"></div>
     <a class="layui-table-text" data-url="{:url('/system.admin/del')}?id={{d.id}}" lay-event="del" >{:__('删除')}</a>
 </script>
-
 <!-- // 列表状态栏 -->
 <script type="text/html" id="userStatus">
     <input type="checkbox" lay-filter="switchStatus" data-url="{:url('/system.admin/status')}" value="{{d.id}}" lay-skin="switch"
@@ -216,7 +196,6 @@
 <script src="__STATICADMIN__module/xmselect/xmselect.js"></script>
 <script>
     layui.use(['admin','layer','table','form','tree'], function () {
-
         var admin = layui.admin;
         var layer = layui.layer;
         var table = layui.table;        // 表格
@@ -327,7 +306,6 @@
 
             // 监听权限提交
             form.on("submit(submitPage)",function(post){
-
                 // 获取用户id
                 var pageThat = layui.$(this),
                 _pageUrl = !status ? pageThat.attr('lay-edit') : pageThat.attr('lay-add');
@@ -353,9 +331,7 @@
 
         // 编辑用户权限/栏目权限回调函数
         admin.callback.rulecates = function(clickthis,colletction,config) {
-
             var tableThis = colletction.tableThis, event = tableThis.event;
-
             var rules = _ajax(event);
             if (typeof rules.code != "undefined") {
                 return layer.msg(rules.msg,'info');
@@ -372,7 +348,6 @@
 
             // 监听权限提交
             form.on("submit(submitPage)", function (post) {
-
                 // 获取用户id
                 post.field.admin_id = tableThis.data.id;
                 // 增加节点数据

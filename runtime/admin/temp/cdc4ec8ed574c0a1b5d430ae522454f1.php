@@ -1,4 +1,4 @@
-<?php /*a:3:{s:47:"D:\SwiftAdmin\app\admin\view\index\monitor.html";i:1663670423;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
+<?php /*a:3:{s:47:"D:\SwiftAdmin\app\admin\view\index\monitor.html";i:1663670762;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -202,11 +202,8 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
-
 <!-- js部分 -->
 <!--// 加载Markdown编辑器-->
 <script src="/static/js/markdown/cherry-markdown.min.js?v=<?php echo release(); ?>"></script>
@@ -222,13 +219,11 @@
 <!-- // 加载font-awesome图标 -->
 <link href="/static/system/layui/css/font-awesome.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css" />
 <script src="/static/system/module/echarts/echarts.js"></script>
-
 <script>
     layui.use(['layer','element'], function () {
         var $ = layui.jquery;
         var layer = layui.layer;
         var element = layui.element;
-
         // 渲染活动情况预测
         var myCharts = echarts.init(document.getElementById('hdqkyc'));
         var mData = [50, 100, 150, 80, 120, 150, 200, 250, 220, 250, 300, 350, 400, 380, 440, 450, 500, 550, 500];
@@ -289,7 +284,6 @@
             tooltip: {
                 formatter: "{a} <br/>{b} : {c}%"
             },
-
             color: ['#1890ff','#666'],    
             series: [
                 {
@@ -319,9 +313,7 @@
                 }
             ]
         };
-
         myCharts2.setOption(option2);
-
         // 设置定时案例
 		setInterval(function () {
 		    option2.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
@@ -411,5 +403,4 @@
     });
 </script>
 </body>
-
 </html>

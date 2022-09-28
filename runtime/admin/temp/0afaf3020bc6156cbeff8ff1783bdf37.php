@@ -1,51 +1,49 @@
-<?php /*a:3:{s:47:"D:\SwiftAdmin\app\admin\view\index\console.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1659669829;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
+<?php /*a:3:{s:47:"D:\SwiftAdmin\app\admin\view\index\console.html";i:1663671017;s:47:"D:\SwiftAdmin\app\admin\view\public\header.html";i:1664337374;s:47:"D:\SwiftAdmin\app\admin\view\public\footer.html";i:1659669829;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>SwiftAdmin 后台管理开发框架</title>
-	<link href="/favicon.ico" rel="icon">
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="/static/system/layui/css/layui.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css" />
-	 <link href="/static/system/css/style.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css" />
-	<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <meta charset="utf-8">
+    <title>SwiftAdmin 后台管理开发框架</title>
+    <link href="/favicon.ico" rel="icon">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="/static/system/layui/css/layui.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css"/>
+    <link href="/static/system/css/style.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css"/>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <script>
-	var _global_ = {
-		app: "<?php echo htmlentities((isset($app) && ($app !== '')?$app:'admin.php')); ?>",
-		controller: "<?php echo htmlentities((isset($controller) && ($controller !== '')?$controller:'index')); ?>",
-		action: "<?php echo htmlentities((isset($action) && ($action !== '')?$action:'index')); ?>",
-		api: "<?php echo config('app.api_url'); ?>"
-	};
+    var _global_ = {
+        app: "<?php echo htmlentities((isset($app) && ($app !== '')?$app:'admin.php')); ?>",
+        controller: "<?php echo htmlentities((isset($controller) && ($controller !== '')?$controller:'index')); ?>",
+        action: "<?php echo htmlentities((isset($action) && ($action !== '')?$action:'index')); ?>",
+        api: "<?php echo config('app.api_url'); ?>"
+    };
 
-	var _upload_chunkSize =  <?php echo saenv('upload_chunk_size'); ?>;
+    var _upload_chunkSize = {
+    :
+    saenv('upload_chunk_size')
+    };
 </script>
-
 <body>
 <style>
     .layui-row {
         overflow: hidden;
         margin-bottom: 10px;
     }
-
     .echartsOrder {
         margin-right: 10px;
     }
-
     .echartsOrder:hover, .echartsOrder.active {
         color: #1890ff;
     }
 </style>
 
 <div class="layui-fluid ">
-
     <div class="layui-row layui-col-space10">
-
         <div class="layui-col-md8">
             <!-- 填充内容 -->
             <div class="layui-card">
@@ -83,7 +81,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-body" style="padding: 20px;">
@@ -115,9 +112,7 @@
             </div>
         </div>
     </div>
-
     <div class="layui-row layui-col-space10" style="margin-bottom: 0;">
-
         <div class="layui-col-md4">
             <div class="layui-row layui-col-space10" style="margin-bottom: 5px;">
                 <div class="layui-col-xs6 layui-col-sm6">
@@ -197,9 +192,7 @@
             </div>
         </div>
     </div>
-
     <div class="layui-row layui-col-space10">
-
         <div class="layui-col-md8">
             <div class="layui-card">
                 <div class="layui-card-header">注册登录概览
@@ -227,7 +220,6 @@
         </div>
     </div>
     <div class="layui-row layui-col-space10">
-
         <div class="layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-header">热搜统计 (CMS)</div>
@@ -237,7 +229,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-md4">
             <div class="layui-card">
                 <div class="layui-card-header">资产报表</div>
@@ -312,7 +303,6 @@
                 </div>
             </div>
         </div>
-
         <div class="layui-col-md4">
             <div class="layui-card" id="console">
                 <div class="layui-card-header">DEVOPS 统计<span class="layui-badge layui-badge-blue pull-right">总</span></div>
@@ -327,7 +317,6 @@
 <script src="/static/system/module/echarts/echarts.js"></script>
 <script src="/static/system/module/echarts/echarts-wordcloud.js"></script>
 <script src="/static/system/module/echarts/china.js"></script>
-
 <!--// 加载Markdown编辑器-->
 <script src="/static/js/markdown/cherry-markdown.min.js?v=<?php echo release(); ?>"></script>
 <link href="/static/js/markdown/cherry-markdown.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css"/>
@@ -341,13 +330,10 @@
 <script src="/static/system/module/xmselect/xmselect.js?v=<?php echo release(); ?>"></script>
 <!-- // 加载font-awesome图标 -->
 <link href="/static/system/layui/css/font-awesome.css?v=<?php echo release(); ?>" rel="stylesheet" type="text/css" />
-
 <script>
     layui.use(['jquery','layer'], function () {
-
         let $ = layui.jquery;
         let layer = layui.layer;
-
         /**
          * 用户统计报表
          * @type {string}
@@ -507,7 +493,6 @@
             userGroupCharts.resize();
         };
     })
-
 </script>
 </body>
 </html>

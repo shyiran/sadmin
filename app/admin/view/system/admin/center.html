@@ -278,14 +278,11 @@
     </div>
 </div>
 <include file="/public/footer" />
-
 <script>
     layui.use(['admin'],function() {
         var admin = layui.admin;
         var jquery = layui.jquery;
-        
         admin.callback.imgHead = function(clickthis, colletction) {
-
             var res = colletction.res;
             if (res.code == 200) { // 查找元素
                 jquery('.imgHead').attr('src',res.url);

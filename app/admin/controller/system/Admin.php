@@ -336,29 +336,22 @@ class Admin extends AdminController
      */
     public function center ()
     {
-
         if (request ()->isPost ()) {
             $post = input (); // 获取POST数据
             $post['id'] = $this->admin['id'];
             if ($this->model->update ($post)) {
                 return $this->success ();
             }
-
             return $this->error ();
         }
-
         $title = [];
         $data = $this->model->find ($this->admin['id']);
         if (!empty($data['group_id'])) {
-            $group = AdminGroupModel::field ('title')
-                ->whereIn ('id', $data['group_id'])
-                ->select ()
-                ->toArray ();
+            $group = AdminGroupModel::field ('title')->whereIn ('id', $data['group_id'])->select ()->toArray ();
             foreach ($group as $key => $value) {
                 $title[$key] = $value['title'];
             }
         }
-
         $data['group'] = implode ('－', $title);
         $data['tags'] = empty($data['tags']) ? $data['tags'] : unserialize ($data['tags']);
         return view ('', [
